@@ -5,6 +5,7 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(wpo1 main.c
         squared.c
+        oef2.c
         fac.h
         ggd.h
-        oef2.c)
+        vkv.h)
