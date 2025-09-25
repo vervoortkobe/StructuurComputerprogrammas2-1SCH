@@ -8,4 +8,5 @@ add_executable(wpo1 main.c
         oef2.c
         fac.h
         ggd.h
-        vkv.h)
+        vkv.h
+        collatz.h)

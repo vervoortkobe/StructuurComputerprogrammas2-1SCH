@@ -3,6 +3,7 @@
 #include "fac.h"
 #include "ggd.h"
 #include "vkv.h"
+#include "collatz.h"
 
 int main(void) {
     //fac
@@ -19,6 +20,10 @@ int main(void) {
     const float y = -3.0;
     const float z = 2.0;
     vkv(x, y, z);
+
+    //collatz
+    const int m = 5;
+    collatz(m);
 
     return 0;
 }
