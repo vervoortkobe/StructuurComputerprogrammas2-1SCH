@@ -5,6 +5,7 @@
 #include "vkv.h"
 #include "collatz.h"
 #include "calc_sine.h"
+#include "ackermann.h"
 
 int main(void) {
     //fac
@@ -29,6 +30,11 @@ int main(void) {
     //calc_sine
     const int p = 1;
     printf("%f", calc_sine(1.5708, p));
+
+    //ackermann
+    const short ma = 2;
+    const short na = 3;
+    printf("ackermann %d, %d: %ld\n", ma, na, ackermann(ma, na));
 
     return 0;
 }
