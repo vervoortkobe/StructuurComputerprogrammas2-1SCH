@@ -9,4 +9,5 @@ add_executable(wpo1 main.c
         fac.h
         ggd.h
         vkv.h
-        collatz.h)
+        collatz.h
+        calc_sine.h)

@@ -4,6 +4,7 @@
 #include "ggd.h"
 #include "vkv.h"
 #include "collatz.h"
+#include "calc_sine.h"
 
 int main(void) {
     //fac
@@ -24,6 +25,10 @@ int main(void) {
     //collatz
     const int m = 5;
     collatz(m);
+
+    //calc_sine
+    const int p = 1;
+    printf("%f", calc_sine(1.5708, p));
 
     return 0;
 }
