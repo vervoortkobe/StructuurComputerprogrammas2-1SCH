@@ -6,6 +6,7 @@
 #include "collatz.h"
 #include "calc_sine.h"
 #include "ackermann.h"
+#include "print_difference.h"
 
 int main(void) {
     //fac
@@ -35,6 +36,9 @@ int main(void) {
     const short ma = 2;
     const short na = 3;
     printf("ackermann %d, %d: %ld\n", ma, na, ackermann(ma, na));
+
+    //print_difference
+    print_difference(10, 0, 0, 11, 2, 3);
 
     return 0;
 }

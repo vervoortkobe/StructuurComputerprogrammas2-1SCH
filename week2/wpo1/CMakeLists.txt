@@ -11,4 +11,5 @@ add_executable(wpo1 main.c
         vkv.h
         collatz.h
         calc_sine.h
-        ackermann.h)
+        ackermann.h
+        print_difference.h)
