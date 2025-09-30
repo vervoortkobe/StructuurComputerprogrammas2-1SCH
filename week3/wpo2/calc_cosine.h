@@ -11,3 +11,19 @@ double calc_cosine(double x, int n) {
     }
     return output;
 }
+
+double calc_cosine_oplossing(double x, int n) {
+    double result = 0;
+    for(int i = 0; i < n; i++) {
+        int exponent = (i-1) * 2;
+        double numerator = pow(x, exponent);
+        int denominator = fac(exponent);
+        double term = numerator / denominator;
+        if (i % 2 == 0) {
+            result -= term;
+        } else {
+            result += term;
+        }
+        return term;
+    }
+}
