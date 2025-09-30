@@ -33,8 +33,8 @@ int main(void) {
     printf("%f", calc_sine(1.5708, p));
 
     //ackermann
-    const short ma = 2;
-    const short na = 3;
+    const long ma = 2;
+    const long na = 3;
     printf("ackermann %d, %d: %ld\n", ma, na, ackermann(ma, na));
 
     //print_difference
