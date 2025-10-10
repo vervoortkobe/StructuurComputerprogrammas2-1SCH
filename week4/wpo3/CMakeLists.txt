@@ -8,4 +8,5 @@ add_executable(wpo3 main.c
         print_perfect_numbers.h
         rotate.h
         do_arithmetic.h
-        my_scanf.h)
+        my_scanf.h
+        my_scanf_int.h)

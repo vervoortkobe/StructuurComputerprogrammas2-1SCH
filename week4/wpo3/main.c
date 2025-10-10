@@ -4,6 +4,7 @@
 #include "rotate.h"
 #include "do_arithmetic.h"
 #include "my_scanf.h"
+#include "my_scanf_int.h"
 
 int main(void) {
     /*
@@ -17,9 +18,13 @@ int main(void) {
         int contains_42;
         do_arithmetic(numbers, 5, &sum, &product, &contains_42);
         printf("Sum: %.2f, Product: %.2f, Contains 42: %d\n", sum, product, contains_42);
+
+        char c;
+        my_scanf("Enter a character: %c", &c);
+        printf("You entered: %c", c);
     */
-    char c;
-    my_scanf("Enter a character: %c", &c);
-    printf("You entered: %c", c);
+    int i;
+    my_scanf_int("Enter an integer: %i", &i);
+    printf("You entered: %i", i);
     return 0;
 }
