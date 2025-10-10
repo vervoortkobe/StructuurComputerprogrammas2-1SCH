@@ -7,4 +7,5 @@ add_executable(wpo3 main.c
         convert_whitespace.h
         print_perfect_numbers.h
         rotate.h
-        do_arithmetic.h)
+        do_arithmetic.h
+        my_scanf.h)
