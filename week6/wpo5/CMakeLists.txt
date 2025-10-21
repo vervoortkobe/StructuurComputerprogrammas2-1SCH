@@ -9,4 +9,5 @@ add_executable(wpo5 main.c
         increment_day.h
         encode_decode.h
         encode_piece_decode_piece.h
+        calc_difference.h
 )
