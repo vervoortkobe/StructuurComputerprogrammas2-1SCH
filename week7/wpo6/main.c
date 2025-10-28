@@ -3,6 +3,7 @@
 #include "generate_primes.h"
 #include "poly_plus.h"
 #include "calculate_all_averages.h"
+#include "read_chess_pieces.h"
 
 int main(void) {
     char string[] = "HELLO WORLD";
@@ -26,6 +27,9 @@ int main(void) {
     int lengths[] = {4, 2, 3};
     float *all_avgs = calculate_all_averages(all_grades, lengths, 3);
     free(all_avgs);
+
+    struct Piece **arr = read_chess_pieces(5); // "input: PpkNK"
+    free_chess_pieces(arr, 5);
 
     return 0;
 }

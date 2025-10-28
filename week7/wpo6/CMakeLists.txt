@@ -7,4 +7,5 @@ add_executable(wpo6 main.c
         lowercase.h
         generate_primes.h
         poly_plus.h
-        calculate_all_averages.h)
+        calculate_all_averages.h
+        read_chess_pieces.h)
