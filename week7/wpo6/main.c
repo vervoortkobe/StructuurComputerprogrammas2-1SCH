@@ -2,6 +2,7 @@
 #include "lowercase.h"
 #include "generate_primes.h"
 #include "poly_plus.h"
+#include "calculate_all_averages.h"
 
 int main(void) {
     char string[] = "HELLO WORLD";
@@ -17,6 +18,14 @@ int main(void) {
     struct variant b = {.u.integer = 10, .type = INT};
     struct variant *result = plus(a, b);
     free(result);
+
+    float student1[] = {14.5, 9, 11, 16.5};
+    float student2[] = {18, 7};
+    float student3[] = {7, 11.5, 13};
+    float *all_grades[] = {student1, student2, student3};
+    int lengths[] = {4, 2, 3};
+    float *all_avgs = calculate_all_averages(all_grades, lengths, 3);
+    free(all_avgs);
 
     return 0;
 }

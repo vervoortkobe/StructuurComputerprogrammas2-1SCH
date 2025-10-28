@@ -6,4 +6,5 @@ set(CMAKE_C_STANDARD 99)
 add_executable(wpo6 main.c
         lowercase.h
         generate_primes.h
-        poly_plus.h)
+        poly_plus.h
+        calculate_all_averages.h)
