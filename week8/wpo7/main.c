@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "filter.h"
+#include "read_students.h"
 
 int do_calculation(char operator, int number1, int number2);
 
@@ -19,6 +20,15 @@ int main(int argc, char *argv[]) {
     int *filtered_array = filter(array, &length, is_larger_than_10);
     // filtered_array is {14, 27, 17}
     // length is 3
+
+    struct Student **students_array = read_students(2);
+
+    for (int i = 0; i < 2; i++) {
+        printf("Student %d: id = %d, average = %.2f\n",
+               i + 1, students_array[i]->id, students_array[i]->average);
+    }
+
+    deallocate_students(students_array, 2);
 }
 
 int do_calculation(char operator, int number1, int number2) {
