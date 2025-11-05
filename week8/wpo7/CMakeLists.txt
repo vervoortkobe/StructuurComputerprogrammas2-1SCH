@@ -7,4 +7,5 @@ add_executable(wpo7 main.c
         filter.h
         read_students.h
         readintlist.h
+        double_linked_list.h
 )
