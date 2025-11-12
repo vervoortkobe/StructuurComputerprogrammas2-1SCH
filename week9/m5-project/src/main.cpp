@@ -25,13 +25,15 @@ uint8_t y = 0;
 void loop(){
   M5.update();
   delay(20);
-  M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, BLACK);
   if(M5.BtnA.isPressed() && M5.BtnB.isPressed()) {
+    M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, BLACK);
     x = 0;
     y = 0;
   } else if(M5.BtnA.isPressed()) {
+    M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, BLACK);
     x += 10;
   } else if(M5.BtnB.isPressed()) {
+    M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, BLACK);
     y += 10;
   }
   if(x > M5.Lcd.width()) {
