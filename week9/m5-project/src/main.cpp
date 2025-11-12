@@ -20,16 +20,24 @@ void setup() {
 #define RECT_HEIGHT 50
 
 // The loop routine keeps looping as long as the controller is on
+uint8_t x = 0;
 uint8_t y = 0;
 void loop(){
   M5.update();
   delay(20);
+  M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, RED);
   if(M5.BtnA.isPressed()) {
-    M5.Lcd.fillScreen(BLACK);
     y++;
-    M5.Lcd.fillRect(20, y, RECT_WIDTH, RECT_HEIGHT, RED);
+    M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, RED);
     if (y > M5.Lcd.height()) {
       y = 0;
+    }
+  }
+  if(M5.BtnB.isPressed()) {
+    x++;
+    M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, RED);
+    if (x > M5.Lcd.width()) {
+      x = 0;
     }
   }
 }
