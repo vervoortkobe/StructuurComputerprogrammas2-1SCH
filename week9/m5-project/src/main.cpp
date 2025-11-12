@@ -24,10 +24,12 @@ uint8_t y = 0;
 void loop(){
   M5.update();
   delay(20);
-  M5.Lcd.fillScreen(BLACK);
-  y++;
-  M5.Lcd.fillRect(20, y, RECT_WIDTH, RECT_HEIGHT, RED);
-  if (y > M5.Lcd.height()) {
-    y = 0;
+  if(M5.BtnA.isPressed()) {
+    M5.Lcd.fillScreen(BLACK);
+    y++;
+    M5.Lcd.fillRect(20, y, RECT_WIDTH, RECT_HEIGHT, RED);
+    if (y > M5.Lcd.height()) {
+      y = 0;
+    }
   }
 }
