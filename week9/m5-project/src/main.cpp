@@ -25,7 +25,7 @@ uint8_t y = 0;
 void loop(){
   M5.update();
   delay(20);
-  M5.Lcd.fillScreen(BLACK);
+  M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, BLACK);
   if(M5.BtnA.isPressed() && M5.BtnB.isPressed()) {
     x = 0;
     y = 0;
