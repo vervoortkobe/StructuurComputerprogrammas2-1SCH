@@ -25,19 +25,20 @@ uint8_t y = 0;
 void loop(){
   M5.update();
   delay(20);
+  M5.Lcd.fillScreen(BLACK);
+  if(M5.BtnA.isPressed() && M5.BtnB.isPressed()) {
+    x = 0;
+    y = 0;
+  } else if(M5.BtnA.isPressed()) {
+    x += 10;
+  } else if(M5.BtnB.isPressed()) {
+    y += 10;
+  }
+  if(x > M5.Lcd.width()) {
+    x = 0;
+  }
+  if(y > M5.Lcd.height()) {
+    y = 0;
+  }
   M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, RED);
-  if(M5.BtnA.isPressed()) {
-    y++;
-    M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, RED);
-    if (y > M5.Lcd.height()) {
-      y = 0;
-    }
-  }
-  if(M5.BtnB.isPressed()) {
-    x++;
-    M5.Lcd.fillRect(x, y, RECT_WIDTH, RECT_HEIGHT, RED);
-    if (x > M5.Lcd.width()) {
-      x = 0;
-    }
-  }
 }
