@@ -49,11 +49,11 @@ void loop() {
 
   float deltaX = (fabsf(ax) > threshold) ? ax * scale : 0.0f;
   if (deltaX != 0.0f) {
-    M5.Lcd.fillRect((int)x, (int)y, RECT_WIDTH, RECT_HEIGHT, BLACK); // erase current
-    x -= 2.0f * deltaX; // undo and invert
+    M5.Lcd.fillRect((int)x, (int)y, RECT_WIDTH, RECT_HEIGHT, BLACK);
+    x -= 2.0f * deltaX;
     if (x < 0) x = 0;
     if (x > M5.Lcd.width() - RECT_WIDTH) x = M5.Lcd.width() - RECT_WIDTH;
-    M5.Lcd.fillRect((int)x, (int)y, RECT_WIDTH, RECT_HEIGHT, RED); // redraw at corrected pos
+    M5.Lcd.fillRect((int)x, (int)y, RECT_WIDTH, RECT_HEIGHT, RED);
   }
   delay(20);
 }
