@@ -15,30 +15,29 @@ int is_empty( Queue q );
 int is_full( Queue q );
 
 Queue create_queue(size_t elmtsize) {
-  Queue q;
-  q = (Queue) malloc( sizeof( struct queue ) );
-  if ( q != NULL ) {
-    q->content = malloc( ARRAY_SIZE * elmtsize );
+  Queue q = malloc(sizeof(struct queue));
+  if (q != NULL) {
+    q->content = calloc(ARRAY_SIZE, elmtsize);
     if ( q->content != NULL ) {
       q->elmtsize = elmtsize;
       q->front = 1;
       q->rear = 0;
       return q;
     }
-    free( q );
+    free(q);
   }
   return NULL;
 }
 
 void insert(Queue q, void* e ) {
   if (!is_full(q)) {
-    q->rear = ( q->rear + 1 ) % ARRAY_SIZE;
-    memcpy( (char*)q->content + q->rear * q->elmtsize, e, q->elmtsize );
+    q->rear = (q->rear + 1) % ARRAY_SIZE;
+    memcpy((char*)q->content + (q->rear * q->elmtsize), e, q->elmtsize);
   };
 }
 
 void first(Queue q, void *e) {
   if (!is_empty(q)) {
-    memcpy( e, (char*)q->content + q->front * q->elmtsize, q->elmtsize );
+    memcpy(e, (char*)q->content + (q->front * q->elmtsize), q->elmtsize);
   }
 }

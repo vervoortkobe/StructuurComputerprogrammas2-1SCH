@@ -9,4 +9,5 @@ add_executable(wpo9 main.c
         balanced_brackets.c
         stack.h
         stack.c
-        generic_queue.c)
+        generic_queue.c
+        delete_node.c)
