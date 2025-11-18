@@ -5,4 +5,7 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(wpo9 main.c
         max_value_node.c
-        generic_tree_insert_node.c)
+        generic_tree_insert_node.c
+        balanced_brackets.c
+        stack.h
+        stack.c)
