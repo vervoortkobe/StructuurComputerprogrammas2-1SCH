@@ -8,7 +8,8 @@ typedef struct tnode {
 
 Tnode *max_value_node(Tnode *tree) {
     Tnode *current = tree;
-    while (current && current->right != NULL) {
+    if (tree == NULL) return NULL;
+    while (current->right != NULL) {
         current = current->right;
     }
     return current;
