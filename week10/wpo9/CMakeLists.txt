@@ -10,4 +10,5 @@ add_executable(wpo9 main.c
         stack.h
         stack.c
         generic_queue.c
-        delete_node.c)
+        delete_node.c
+        generic_linked_list.c)
