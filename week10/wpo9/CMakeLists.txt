@@ -8,4 +8,5 @@ add_executable(wpo9 main.c
         generic_tree_insert_node.c
         balanced_brackets.c
         stack.h
-        stack.c)
+        stack.c
+        generic_queue.c)
